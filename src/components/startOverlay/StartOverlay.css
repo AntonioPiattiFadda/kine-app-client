@@ -1,0 +1,58 @@
+.planOverlay {
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  width: 100vw;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 900;
+}
+.planOverlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 950;
+}
+.planOverlay:first-child div {
+  position: absolute;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1000;
+}
+.planOverlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.planOverlay:first-child div p {
+  font-size: 1.5rem;
+  color: var(--background-color);
+  text-shadow: var(--text-shadow);
+}
+.planOverlay:first-child div button {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  text-shadow: var(--text-shadow);
+  cursor: pointer;
+}
+.planOverlayClosed {
+  height: 0px;
+}

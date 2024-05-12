@@ -1,4 +1,4 @@
-import { ChartComponent } from '../components/charts/chart';
+// import { ChartComponent } from '../components/charts/chart';
 import './Graphics.css';
 
 const initialData = [
@@ -14,11 +14,11 @@ const initialData = [
   { time: '2018-12-31', value: 22.67 },
 ];
 
-export function Graphics(props) {
+export function Graphics() {
   return (
     <div className="graphicsContainer">
       <h2>Estadisticas</h2>
-      <ChartComponent {...props} data={initialData} />
+      {/* <ChartComponent {...props} data={initialData} /> */}
     </div>
   );
 }

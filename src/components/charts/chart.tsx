@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { createChart, ColorType } from 'lightweight-charts';
 
 export const ChartComponent = (props) => {
@@ -16,6 +16,7 @@ export const ChartComponent = (props) => {
   const chartContainerRef = useRef();
 
   useEffect(() => {
+    if (!chartContainerRef.current) return;
     const handleResize = () => {
       chart.applyOptions({ width: chartContainerRef.current.clientWidth });
     };

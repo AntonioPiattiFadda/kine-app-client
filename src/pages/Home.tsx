@@ -1,10 +1,14 @@
 import './Home.css';
 import ProfessionalData from '../mocks/Professional.json';
 import ClientData from '../mocks/ClientPlan.json';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
   const [professional, setProfessional] = useState(ProfessionalData);
+
+  useEffect(() => {
+    setProfessional(ProfessionalData);
+  }, []);
 
   return (
     <div className="homeContainer">

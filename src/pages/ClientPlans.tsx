@@ -58,7 +58,7 @@ const ClientPlan = () => {
                     {plan.time}'
                   </span>
                   <Link to={`/plan/${plan.id}`}>
-                    Play
+                    Ver
                     <CiPlay1 />
                   </Link>
                 </div>

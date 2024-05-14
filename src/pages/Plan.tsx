@@ -4,9 +4,9 @@ import { useParams } from 'react-router-dom';
 import '../variables.css';
 import './Plan.css';
 import Loader from '../components/loader/Loader';
-import PlanStartImage from '../assets/planStartImage.jpg';
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { MdOutlineWatchLater } from 'react-icons/md';
+import { IoInformationCircleOutline } from 'react-icons/io5';
 
 const Plan = () => {
   const [planData, setPlanData] = useState(PlanData);
@@ -39,15 +39,14 @@ const Plan = () => {
     <>
       <img
         className="planBgImage"
-        src={PlanStartImage}
+        src="https://es.la-croix.com/images/0000/que-es-la-noche-oscura.jpeg"
         alt="background image"
       />
       <div className="planContainer">
-        <span>
+        <span className="arrowIcon">
           <BsArrowLeftShort />
         </span>
-        <div>
-          <h2>Mi Plan de {planData.name}</h2>
+        <div className="planInfo">
           <span className="planDay">{planData.day}</span>
           <span className="planTime">
             <MdOutlineWatchLater />
@@ -63,8 +62,17 @@ const Plan = () => {
                   <span></span>
                 </div>
                 <div className="individualExerciseSecondColumn">
-                  <img src={exercise.image} alt="exercise photo" />
-                  <span className="exerciseName">{exercise.name}</span>
+                  <img
+                    src="https://i.blogs.es/59ee02/img_0682/650_1200.jpg"
+                    alt="exercise photo"
+                  />
+                  <span className="exerciseInfoButton">
+                    <IoInformationCircleOutline />
+                  </span>
+                  <div>
+                    <span className="exerciseName">{exercise.name}</span>
+                    <span className="exerciseName">4x12</span>
+                  </div>
                 </div>
               </div>
             );

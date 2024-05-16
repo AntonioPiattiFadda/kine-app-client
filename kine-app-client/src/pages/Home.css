@@ -1,9 +1,0 @@
-.homeContainer {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-.homeContainer h2 {
-  font-size: var(--font-size-title);
-}

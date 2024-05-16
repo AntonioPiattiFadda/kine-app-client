@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
-import { IoIosStats } from 'react-icons/io';
+// import { IoIosStats } from 'react-icons/io';
 import { IoHomeOutline } from 'react-icons/io5';
 import { CgGym } from 'react-icons/cg';
 
@@ -19,7 +19,7 @@ const Navbar = () => {
           to={`/home/${clientId}`}
         >
           <IoHomeOutline />
-          <p>{location.pathname === `/home/${clientId}` ? 'Home' : ''}</p>
+          <p>{location.pathname === `/home/${clientId}` ? 'Inicio' : ''}</p>
         </Link>
       </div>
       <div className="navbar-center">
@@ -34,12 +34,12 @@ const Navbar = () => {
             {' '}
             <CgGym />
             <p>
-              {location.pathname === `/patient/${clientId}` ? 'Patient' : ''}
+              {location.pathname === `/patient/${clientId}` ? 'Plan' : ''}
             </p>{' '}
           </Link>
         </div>
       </div>
-      <div className="navbar-right">
+      {/* <div className="navbar-right">
         <Link
           style={{
             color:
@@ -53,7 +53,7 @@ const Navbar = () => {
             {location.pathname === `/graphics/${clientId}` ? 'graphics' : ''}
           </p>
         </Link>
-      </div>
+      </div> */}
     </nav>
   );
 };

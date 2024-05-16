@@ -1,14 +1,13 @@
-import ClientPlanData from '../mocks/ClientPlan.json';
+import ClientPlanData from '../../mocks/ClientPlan.json';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../variables.css';
 import './ClientPlans.css';
-import Loader from '../components/loader/Loader';
+import Loader from '../../components/client/loader/Loader';
 import { MdOutlineWatchLater } from 'react-icons/md';
 import { CiPlay1 } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 
-const ClientPlan = () => {
+const ClientPlans = () => {
   const [clientPlanData, setClientPlanData] = useState(ClientPlanData);
   const [loading, setLoading] = useState(true);
 
@@ -58,7 +57,7 @@ const ClientPlan = () => {
                     {plan.time}'
                   </span>
                   <Link to={`/plan/${plan.id}`}>
-                    Play
+                    Ver
                     <CiPlay1 />
                   </Link>
                 </div>
@@ -71,4 +70,4 @@ const ClientPlan = () => {
   );
 };
 
-export default ClientPlan;
+export default ClientPlans;

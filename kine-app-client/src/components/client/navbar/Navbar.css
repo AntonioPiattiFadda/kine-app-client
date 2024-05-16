@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: var(--nav-height);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -13,6 +13,7 @@
   padding: 2rem 1.5rem 4 rem;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   z-index: 700;
+  max-width: var(--max-app-width);
 }
 
 .navbar-left,
@@ -57,4 +58,11 @@
 .navbar-icon p {
   margin: 3px 0 0 0;
   font-size: 0.8rem;
+}
+
+@media screen and (min-width: 480px) {
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

@@ -1,4 +1,4 @@
-import PlanStartImage from '../../assets/planStartImage.jpg';
+import PlanStartImage from '../../../assets/planStartImage.jpg';
 import './StartOverlay.css';
 
 const StartOverlay = () => {

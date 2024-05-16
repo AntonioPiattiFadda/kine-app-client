@@ -12,9 +12,9 @@
     {
       "id": 1,
       "name": "Movilidad de Hombro",
-      "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
-      "description": "Estiramiento de gemelos contra la pared",
-      "videoLink": "https://youtu.be/nl-ho9I_yoc",
+      "image": "https://i.ytimg.com/vi/45RrKzSDyg4/maxresdefault.jpg",
+      "description": "Movilidad en rotacion interna y externa de hombre",
+      "videoLink": "https://www.youtube.com/watch?v=WvrMoB9smvI&ab_channel=SquatUniversityEspa%C3%B1ol",
       "categoryId": 1,
       "createdAt": "2024-05-02T18:46:43.409Z",
       "PlanExercise": {
@@ -26,10 +26,10 @@
     },
     {
       "id": 2,
-      "name": "Movilidad de Hombro",
-      "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+      "name": "Kettlebell Bottom para hombro",
+      "image": "https://i.ytimg.com/vi/c_8XzHbDLIE/maxresdefault.jpg",
       "description": "Estiramiento de gemelos contra la pared",
-      "videoLink": "https://youtu.be/nl-ho9I_yoc",
+      "videoLink": "https://www.youtube.com/shorts/KHQrCrFQjcg",
       "categoryId": 1,
       "createdAt": "2024-05-02T18:46:43.409Z",
       "PlanExercise": {
@@ -41,10 +41,10 @@
     },
     {
       "id": 3,
-      "name": "Movilidad de Hombro",
-      "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+      "name": "Rotación externa de hombro con banda elastica",
+      "image": "https://i.ytimg.com/vi/PqqJmsPd3Jw/maxresdefault.jpg",
       "description": "Estiramiento de gemelos contra la pared",
-      "videoLink": "https://youtu.be/nl-ho9I_yoc",
+      "videoLink": "https://www.youtube.com/watch?v=wQdfeB80fqo&ab_channel=PacoTheFisio",
       "categoryId": 1,
       "createdAt": "2024-05-02T18:46:43.409Z",
       "PlanExercise": {

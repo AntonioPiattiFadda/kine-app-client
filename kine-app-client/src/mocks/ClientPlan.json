@@ -1,7 +1,7 @@
 {
   "id": 1,
-  "name": "Antonio",
-  "lastName": "Piatti Fadda",
+  "name": "Ramon Gómez",
+
   "patology": "Pinzamiento anterior tobillo",
   "createdAt": "2024-05-02T18:46:27.378Z",
   "professionalId": 1,
@@ -20,9 +20,9 @@
         {
           "id": 1,
           "name": "Movilidad de Hombro",
-          "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
-          "description": "Estiramiento de gemelos contra la pared",
-          "videoLink": "https://youtu.be/nl-ho9I_yoc",
+          "image": "https://i.ytimg.com/vi/45RrKzSDyg4/maxresdefault.jpg",
+          "description": "Movilidad en rotacion interna y externa de hombre",
+          "videoLink": "https://www.youtube.com/watch?v=WvrMoB9smvI&ab_channel=SquatUniversityEspa%C3%B1ol",
           "categoryId": 1,
           "createdAt": "2024-05-02T18:46:43.409Z",
           "PlanExercise": {
@@ -34,10 +34,10 @@
         },
         {
           "id": 2,
-          "name": "Movilidad de Hombro",
-          "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+          "name": "Kettlebell Bottom para hombro",
+          "image": "https://i.ytimg.com/vi/c_8XzHbDLIE/maxresdefault.jpg",
           "description": "Estiramiento de gemelos contra la pared",
-          "videoLink": "https://youtu.be/nl-ho9I_yoc",
+          "videoLink": "https://www.youtube.com/shorts/KHQrCrFQjcg",
           "categoryId": 1,
           "createdAt": "2024-05-02T18:46:43.409Z",
           "PlanExercise": {
@@ -49,10 +49,10 @@
         },
         {
           "id": 3,
-          "name": "Movilidad de Hombro",
-          "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+          "name": "Rotación externa de hombro con banda elastica",
+          "image": "https://i.ytimg.com/vi/PqqJmsPd3Jw/maxresdefault.jpg",
           "description": "Estiramiento de gemelos contra la pared",
-          "videoLink": "https://youtu.be/nl-ho9I_yoc",
+          "videoLink": "https://www.youtube.com/watch?v=wQdfeB80fqo&ab_channel=PacoTheFisio",
           "categoryId": 1,
           "createdAt": "2024-05-02T18:46:43.409Z",
           "PlanExercise": {
@@ -117,62 +117,6 @@
             "id": 1,
             "createdAt": "2024-05-02T18:48:50.661Z",
             "planId": 2,
-            "exerciseId": 1
-          }
-        }
-      ]
-    },
-    {
-      "id": 1,
-      "patientId": 1,
-
-      "name": "Nutrición",
-      "image": "https://media.airedesantafe.com.ar/p/8f1e2f436b7d30477313e031cb0496f3/adjuntos/268/imagenes/001/928/0001928500/diferencias-la-alimentacion-y-nutricion-saludable.jpeg",
-
-      "createdAt": "2024-05-02T18:48:42.793Z",
-      "exercises": [
-        {
-          "id": 1,
-          "name": "Movilidad de Hombro",
-          "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
-          "description": "Estiramiento de gemelos contra la pared",
-          "videoLink": "https://youtu.be/nl-ho9I_yoc",
-          "categoryId": 1,
-          "createdAt": "2024-05-02T18:46:43.409Z",
-          "PlanExercise": {
-            "id": 1,
-            "createdAt": "2024-05-02T18:48:50.661Z",
-            "planId": 1,
-            "exerciseId": 1
-          }
-        },
-        {
-          "id": 2,
-          "name": "Movilidad de Hombro",
-          "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
-          "description": "Estiramiento de gemelos contra la pared",
-          "videoLink": "https://youtu.be/nl-ho9I_yoc",
-          "categoryId": 1,
-          "createdAt": "2024-05-02T18:46:43.409Z",
-          "PlanExercise": {
-            "id": 1,
-            "createdAt": "2024-05-02T18:48:50.661Z",
-            "planId": 1,
-            "exerciseId": 1
-          }
-        },
-        {
-          "id": 3,
-          "name": "Movilidad de Hombro",
-          "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
-          "description": "Estiramiento de gemelos contra la pared",
-          "videoLink": "https://youtu.be/nl-ho9I_yoc",
-          "categoryId": 1,
-          "createdAt": "2024-05-02T18:46:43.409Z",
-          "PlanExercise": {
-            "id": 1,
-            "createdAt": "2024-05-02T18:48:50.661Z",
-            "planId": 1,
             "exerciseId": 1
           }
         }

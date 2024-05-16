@@ -1,0 +1,58 @@
+{
+  "id": 1,
+  "patientId": 1,
+
+  "name": "Rehabilitación",
+  "image": "https://johannawestin.com/wp-content/uploads/2021/12/fisioterapia.jpg",
+  "day": "Día 1",
+  "time": "35",
+
+  "createdAt": "2024-05-02T18:48:42.793Z",
+  "exercises": [
+    {
+      "id": 1,
+      "name": "Movilidad de Hombro",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+      "description": "Estiramiento de gemelos contra la pared",
+      "videoLink": "https://youtu.be/nl-ho9I_yoc",
+      "categoryId": 1,
+      "createdAt": "2024-05-02T18:46:43.409Z",
+      "PlanExercise": {
+        "id": 1,
+        "createdAt": "2024-05-02T18:48:50.661Z",
+        "planId": 1,
+        "exerciseId": 1
+      }
+    },
+    {
+      "id": 2,
+      "name": "Movilidad de Hombro",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+      "description": "Estiramiento de gemelos contra la pared",
+      "videoLink": "https://youtu.be/nl-ho9I_yoc",
+      "categoryId": 1,
+      "createdAt": "2024-05-02T18:46:43.409Z",
+      "PlanExercise": {
+        "id": 1,
+        "createdAt": "2024-05-02T18:48:50.661Z",
+        "planId": 1,
+        "exerciseId": 1
+      }
+    },
+    {
+      "id": 3,
+      "name": "Movilidad de Hombro",
+      "image": "https://tse1.mm.bing.net/th?id=OIP.yBjIW6Jhc3_-YWzSe9YP8QHaE9&pid=Api&rs=1&c=1&qlt=95&w=152&h=101",
+      "description": "Estiramiento de gemelos contra la pared",
+      "videoLink": "https://youtu.be/nl-ho9I_yoc",
+      "categoryId": 1,
+      "createdAt": "2024-05-02T18:46:43.409Z",
+      "PlanExercise": {
+        "id": 1,
+        "createdAt": "2024-05-02T18:48:50.661Z",
+        "planId": 1,
+        "exerciseId": 1
+      }
+    }
+  ]
+}

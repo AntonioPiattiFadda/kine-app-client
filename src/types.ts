@@ -5,4 +5,5 @@ export interface ExerciseType {
   description: string;
   videoLink: string;
   categoryId: number;
+  index: number;
 }

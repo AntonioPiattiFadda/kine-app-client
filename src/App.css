@@ -11,3 +11,11 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   display: none;
 }
+
+@media screen and (min-width: 480px) {
+  .appContainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+}

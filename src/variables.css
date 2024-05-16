@@ -7,12 +7,14 @@
   --text-color: rgb(0, 0, 0);
 
   --container-width: 1250px;
+  --max-app-width: 480px;
   --container-width-mobile: 100%;
+  --nav-height: 100px;
   --text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   --box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 
-  --font-size-title: 3rem;
-  --font-size-subtitle: 2rem;
+  --font-size-title: 2rem;
+  --font-size-subtitle: 1.5rem;
 
   --font-poppins: 'Poppins', sans-serif;
 }

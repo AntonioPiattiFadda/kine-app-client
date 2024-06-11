@@ -9,7 +9,7 @@ const AdminNavbar = () => {
   console.log(uid);
 
   const location = useLocation();
-  if (location.pathname.includes('cli')) {
+  if (!location.pathname.includes('admin')) {
     return null;
   }
 

@@ -14,12 +14,14 @@ import Login from './pages/admin/Login';
 import './App.css';
 import CreatePlan from './pages/admin/CreatePlan';
 import Dashboard from './pages/admin/Dashboard';
+import TestComponent from './pages/client/TestComponent';
 
 function App() {
   return (
     <BrowserRouter>
       {/* <StartOverlay /> */}
       <Routes>
+        <Route path="/" element={<TestComponent />} />
         <Route path="/cli/home" element={<Home />} />
         <Route path="/cli/patient" element={<ClientPlans />} />
         <Route path="/cli/plan/:planId" element={<Plan />} />

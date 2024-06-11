@@ -5,6 +5,8 @@ const StartOverlay = () => {
   const handleOverlayClick = () => {
     const planOverlay = document.getElementById('planOverlay');
     planOverlay?.classList.toggle('planOverlayClosed');
+    window.location.href =
+      '/cli/patient?uidpat=yBoieYZYmx00aWVaJAHn&&uidprof=auc92632FbRbnVRF85bRW77i7a83';
   };
   return (
     <div className="planOverlay" id="planOverlay">

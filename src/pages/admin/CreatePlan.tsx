@@ -129,6 +129,8 @@ const CreatePlan = () => {
         <div className="formAndDataTableContainer">
           <form className="form">
             {newPlanExercises.map((option, index) => {
+              console.log(option);
+
               return (
                 <div key={index}>
                   <label>Ejercicio</label>

@@ -27,7 +27,8 @@ const Exercise = ({
       <div className="titleContainer">
         <h2>Ejercicio</h2>
         <p>
-          <span>{exercise.index + 1}</span>/{totalExercises}
+          <span>{exercise?.index !== undefined ? exercise.index + 1 : ''}</span>
+          /{totalExercises}
         </p>
       </div>
       <div className="videoContainer">
@@ -35,7 +36,7 @@ const Exercise = ({
           controls
           width={'80%'}
           height={250}
-          url={exercise.videoLink}
+          url={exercise.video_link}
         />
       </div>
       <div className="videoInfo">

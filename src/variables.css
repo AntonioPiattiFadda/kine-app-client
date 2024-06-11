@@ -12,6 +12,7 @@
   --nav-height: 100px;
   --text-shadow: 1.5px 1.5px 6px rgba(0, 0, 0, 0.5);
   --box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  --border-color: rgba(0, 0, 0, 0.2);
 
   --font-size-title: 2rem;
   --font-size-subtitle: 1.5rem;

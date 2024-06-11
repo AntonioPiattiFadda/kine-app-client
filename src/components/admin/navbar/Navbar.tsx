@@ -4,10 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { IoHomeOutline } from 'react-icons/io5';
 import { CgGym } from 'react-icons/cg';
 
-const ClientNavbar = () => {
-  const location = useLocation();
+const AdminNavbar = () => {
+  const uid = sessionStorage.getItem('uid');
+  console.log(uid);
 
-  if (location.pathname.includes('admin')) {
+  const location = useLocation();
+  if (location.pathname.includes('cli')) {
     return null;
   }
 
@@ -16,25 +18,25 @@ const ClientNavbar = () => {
       <div className="navbar-left">
         <Link
           style={{
-            color: location.pathname === `/cli/home` ? 'black' : 'grey',
+            color: location.pathname === `/admin/login` ? 'black' : 'red',
           }}
-          to={`/cli/home`}
+          to={`/admin/login`}
         >
           <IoHomeOutline />
-          <p>{location.pathname === `/cli/home` ? 'Inicio' : ''}</p>
+          <p>{location.pathname === `/admin/login` ? 'Inicio' : ''}</p>
         </Link>
       </div>
       <div className="navbar-center">
         <div className="navbar-icon">
           <Link
             style={{
-              color: location.pathname === `/cli/patient` ? 'black' : 'grey',
+              color: location.pathname === `/admin/dashboard` ? 'black' : 'red',
             }}
-            to={`/cli/patient`}
+            to={`/admin/dashboard`}
           >
             {' '}
             <CgGym />
-            <p>{location.pathname === `/cli/patient` ? 'Plan' : ''}</p>{' '}
+            <p>{location.pathname === `/admin/dashboard` ? 'Plan' : ''}</p>{' '}
           </Link>
         </div>
       </div>
@@ -42,14 +44,14 @@ const ClientNavbar = () => {
         <Link
           style={{
             color:
-              location.pathname === `/graphics/${cliId}` ? 'black' : 'grey',
+              location.pathname === `/graphics/${clientId}` ? 'black' : 'grey',
           }}
-          to={`/graphics/${cliId}`}
+          to={`/graphics/${clientId}`}
         >
           {' '}
           <IoIosStats />{' '}
           <p>
-            {location.pathname === `/graphics/${cliId}` ? 'graphics' : ''}
+            {location.pathname === `/graphics/${clientId}` ? 'graphics' : ''}
           </p>
         </Link>
       </div> */}
@@ -57,4 +59,4 @@ const ClientNavbar = () => {
   );
 };
 
-export default ClientNavbar;
+export default AdminNavbar;

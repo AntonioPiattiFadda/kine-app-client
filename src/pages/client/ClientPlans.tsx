@@ -1,23 +1,44 @@
-import ClientPlanData from '../../mocks/ClientPlan.json';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './ClientPlans.css';
 import Loader from '../../components/client/loader/Loader';
 import { MdOutlineWatchLater } from 'react-icons/md';
 import { CiPlay1 } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
+import { getPatientPlans } from '../../services';
+import { PlanType } from '../../types';
 
 const ClientPlans = () => {
-  const [clientPlanData, setClientPlanData] = useState(ClientPlanData);
+  const [clientPlanData, setClientPlanData] = useState<PlanType[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const { patientId } = useParams();
-  console.log(patientId);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const uidPat = searchParams.get('uidpat');
+  const uidProf = searchParams.get('uidprof');
+  if (uidPat) {
+    sessionStorage.setItem('uidPat', uidPat);
+  }
+  if (uidProf) {
+    sessionStorage.setItem('uidProf', uidProf);
+  }
+  //NOTE - Link  para enviar: http://localhost:5173/cli/patient?uidpat=yBoieYZYmx00aWVaJAHn&&uidprof=auc92632FbRbnVRF85bRW77i7a83
 
   useEffect(() => {
-    setClientPlanData(ClientPlanData);
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+    const uidPatSession = sessionStorage.getItem('uidPat');
+    const uidProfSession = sessionStorage.getItem('uidProf');
+
+    if (uidPatSession && uidProfSession) {
+      getPatientPlans(uidPatSession, uidProfSession)
+        .then((plans) => {
+          setClientPlanData(plans);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error('Error al obtener los planes:', error);
+        });
+    }
+  }, [uidPat, uidProf]);
 
   if (loading) {
     return (
@@ -38,7 +59,7 @@ const ClientPlans = () => {
       <div className="clientPlanContainer">
         <h2>Mis Planes</h2>
         <div className="plans">
-          {clientPlanData.plans.map((plan) => {
+          {clientPlanData.map((plan) => {
             return (
               <div
                 className="individualPlan"
@@ -49,14 +70,14 @@ const ClientPlans = () => {
                 }}
                 key={plan.id}
               >
-                <span className="planDay">{plan.day}</span>
+                <span className="planDay">Día {plan.day}</span>
                 <span className="planName">{plan.name}</span>
                 <div className="timeAndPlay">
                   <span className="planTime">
                     <MdOutlineWatchLater />
-                    {plan.time}'
+                    {plan.duration}'
                   </span>
-                  <Link to={`/plan/${plan.id}`}>
+                  <Link to={`/cli/plan/${plan.id}`}>
                     Ver
                     <CiPlay1 />
                   </Link>

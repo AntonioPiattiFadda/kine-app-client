@@ -1,4 +1,3 @@
-import PlanData from '../../mocks/Plan.json';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from '../../components/client/loader/Loader';
@@ -6,31 +5,49 @@ import { BsArrowLeftShort } from 'react-icons/bs';
 import { MdOutlineWatchLater } from 'react-icons/md';
 import { IoInformationCircleOutline } from 'react-icons/io5';
 import Exercise from './Exercise';
-import { ExerciseType } from '../../types';
+import { ExerciseType, PlanType } from '../../types';
 import './Plan.css';
 import { Link } from 'react-router-dom';
+import { getPlanExercises } from '../../services';
 
 const Plan = () => {
-  const [planData, setPlanData] = useState(PlanData);
+  const [planData, setPlanData] = useState<PlanType>({
+    id: '',
+    name: '',
+    day: '',
+    image: '',
+    duration: 0,
+    exercises: [],
+  });
+
   const [loading, setLoading] = useState(true);
   const [exercise, setExercise] = useState<ExerciseType>({
-    id: 0,
+    id: '',
     name: '',
     image: '',
     description: '',
-    videoLink: '',
-    categoryId: 0,
+    video_link: '',
+    series: 0,
+    repetitions: 0,
     index: 0,
   });
   const [showExercise, setShowExercise] = useState(false);
-
   const { planId } = useParams();
-  console.log(planId);
+  const uidPatSession = sessionStorage.getItem('uidPat');
+  const uidProfSession = sessionStorage.getItem('uidProf');
 
   useEffect(() => {
-    setPlanData(PlanData);
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
+    if (planId && uidPatSession && uidProfSession) {
+      getPlanExercises(planId, uidPatSession, uidProfSession)
+        .then((PlanData) => {
+          setLoading(false);
+          console.log('PlanData:', PlanData);
+          if (!PlanData) return;
+          setPlanData(PlanData);
+        })
+        .catch((error) => console.error('Error al obtener el plan:', error));
+    }
+  }, [planId, uidPatSession, uidProfSession]);
 
   const handleShowExercise = (exerciseInfo: ExerciseType) => {
     setExercise({ ...exerciseInfo });
@@ -70,10 +87,10 @@ const Plan = () => {
           <BsArrowLeftShort />
         </Link>
         <div className="planInfo">
-          <span className="planDay">{planData.day}</span>
+          <span className="planDay">Día {planData.day}</span>
           <span className="planTimeDuration">
             <MdOutlineWatchLater />
-            {planData.time}'
+            {planData.duration}'
           </span>
         </div>
         <div className="exercises">
